@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 no me sirve
-=======
 no me sirve
-..
->>>>>>> 0dc00c9d5b7b76f5c18aa7108c1b190b80556e30
+no me sirve 
+
