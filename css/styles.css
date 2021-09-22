@@ -1,0 +1,96 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Style the header */
+    
+    .header {
+        grid-area: header;
+        background-color: orange;
+        padding: 30px;
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        margin-bottom: 10px;
+    }
+    /* The grid container */
+    
+    .grid-container {
+        display: grid;
+        grid-template-areas: 'header header header header header header' 'left middle middle middle middle right' 'footer footer footer footer footer footer';
+        /* grid-column-gap: 10px; - if you want gap between the columns */
+    }
+    
+    .left,
+    .middle,
+    .right {
+        padding: 10px;
+        height: 300px;
+        /* Should be removed. Only for demonstration */
+    }
+    /* Style the left column */
+    
+    .left {
+        grid-area: left;
+        text-align: center;
+        background-color: purple;
+        color: white;
+    }
+    /* Style the middle column */
+    
+    .middle {
+        grid-area: middle;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+    /* Style the right column */
+    
+    .right {
+        grid-area: right;
+    }
+    /* Style the footer */
+    
+    .footer {
+        grid-area: footer;
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    
+    .boton-inicio {
+        background-color: lightgreen;
+        margin-top: 15px;
+        border-style: none;
+        border-radius: 10px;
+        font-size: large;
+        text-align: center;
+        padding: 10px 40px;
+    }
+    
+    .boton-inicio:hover {
+        box-shadow: darkgreen;
+        transform: scale(1.1);
+    }
+    
+    input {
+        border-style: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 15px;
+    }
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    
+    @media (max-width: 600px) {
+        .grid-container {
+            grid-template-areas: 'header header header header header header' 'left left left left left left' 'middle middle middle middle middle middle' 'right right right right right right' 'footer footer footer footer footer footer';
+        }
+    }
