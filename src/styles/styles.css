@@ -80,6 +80,12 @@ input[type=date] {
   border-radius: 8px;
 }
 
+select {
+  padding: 10px;
+  margin: 0px 10px 10px 10px;
+  border-radius: 8px;
+}
+
 input[type=submit] {
   background-color: var(--Celadon);
   padding: 15px;
@@ -87,6 +93,7 @@ input[type=submit] {
   color: var(--Honeydew);
   border-radius: 10px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 input[type=submit]:hover {

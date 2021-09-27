@@ -36,7 +36,7 @@ function GestionVendedores() {
           <input type="text"></input>
           <label for="">Fecha ingreso</label>
           <input type="date"></input>          
-          <input className="boton" type="submit" value="Generar venta"></input>
+          <input className="boton" type="submit" value="Crear"></input>
         </form>
       </div>
       <div className="contenedor-layout__footer">
