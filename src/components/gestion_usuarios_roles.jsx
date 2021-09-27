@@ -17,15 +17,7 @@ function GestionUsuarios() {
           <tr>
             <th>01</th>
             <th>Sofia Osorio</th>
-            <th><select>
-              <option>Vendedor</option>
-              <option>Administrador</option>
-              <option>Ejecutivo</option>
-              <option>Operativo</option>
-              <option>Director</option>
-              <option>Gerente comercial</option>              
-            </select>           
-            </th>
+            <th>Gerente</th>
             <th>Editar / Elimimar</th>
           </tr>
         </table>
@@ -36,8 +28,17 @@ function GestionUsuarios() {
           <label for="">id</label>
           <input type="text"></input>
           <label for="">Nombre</label>
-          <input type="text"></input>                 
-          <input className="boton" type="submit" value="Generar venta"></input>
+          <input type="text"></input> 
+          <label for="">Rol</label>  
+          <select>
+              <option>Vendedor</option>
+              <option>Administrador</option>
+              <option>Ejecutivo</option>
+              <option>Operativo</option>
+              <option>Director</option>
+              <option>Gerente comercial</option>              
+            </select>              
+          <input className="boton" type="submit" value="Actualizar"></input>
         </form>
       </div>
       </div>
