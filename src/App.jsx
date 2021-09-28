@@ -1,10 +1,4 @@
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Inicio from "./pages/inicio";
 import Login from "./components/login";
 import Venta from "./pages/ventas";
