@@ -12,6 +12,8 @@ import './styles/styles.css';
 import RegistrarVenta from "./components/registrar_estado_venta";
 import GestionVendedores from "./components/gestion_vendedores";
 import GestionUsuarios from "./components/gestion_usuarios_roles";
+import Producto from "./components/productos";
+
 
 function App() {
     return (
@@ -33,6 +35,9 @@ function App() {
                     </Route>
                     <Route path='/gestion_usuarios'>
                         <GestionUsuarios />                        
+                    </Route>
+                    <Route path='/productos'>
+                        <Producto />                        
                     </Route>
                     <Route path=''>
                         <Login />

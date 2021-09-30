@@ -1,14 +1,17 @@
+import {Link} from 'react-router-dom';
+
+
 function Cabecera() {
   return (
     <div>
       <header className="cabecera">
         <nav className="cabecera__nav-bar">
           <ul className="cabecera__nav-bar--li">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#ventas">Registrar ventas</a></li>
-            <li><a href="#estado">Estado de ventas</a></li>
-            <li><a href="#vendedores">Gestión de vendedores</a></li>
-            <li><a href="#roles">Gestión de usuarios y roles</a></li>
+            <li><Link to='/inicio'><p>inicio</p></Link></li>
+            <li><Link to='/ventas'><p>ventas</p></Link>  </li>
+            <li><Link to='/estado_ventas'><p>Estado de ventas</p></Link></li>
+            <li><Link to='/gestion_vendedores'><p>Gestión de vendedores</p></Link></li>
+            <li><Link to='/gestion_usuarios'><p>Gestión de usuarios y roles</p></Link></li>
           </ul>
         </nav>
       </header>
