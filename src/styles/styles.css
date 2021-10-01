@@ -20,13 +20,14 @@ body {
 .contenedor__formulario{
   display: flex;   
   justify-content: center; 
-  margin-top: 20rem;
+  
 }
 
 .contenedor__formulario-login {
   display: flex;
   text-align: center;
-  justify-content: center;  
+  justify-content: center;
+  margin-top: 20rem;  
 }
 
 .contenedor__formulario-login--inputs {
@@ -43,7 +44,8 @@ form {
   background-color: var(--Azul-oscuro);
   border-radius: 10px;
   box-shadow: 10px 10px 10px var(--Azul-oscuro); 
-  width: 20rem;   
+  width: 20rem; 
+  margin-top: 4.5rem;  
 }
 
 #ini-sesion {
@@ -124,6 +126,8 @@ input[type=submit]:hover {
   transform: scale(1.05);
 }
 
+
+
 .buscar{
   margin-left: 1rem;
   color: var(--Honeydew);
@@ -133,16 +137,16 @@ input[type=submit]:hover {
 
 .cabecera {
   display: flex;
-  justify-content: flex-end;
+  justify-content:center;
 }
 
 .cabecera__nav-bar {
-  display: flex;
+  display: flex;  
 }
 
 .cabecera__nav-bar--li {
   display: flex;
-  list-style-type: none;
+  
   padding: 0;
   margin-top: 40px;
   overflow: hidden;
@@ -151,6 +155,7 @@ input[type=submit]:hover {
 
 .cabecera__nav-bar--li li {
   border-right: 1.5px solid var(--Honeydew);
+  list-style-type: none;
 }
 
 .cabecera__nav-bar--li p {
@@ -160,6 +165,7 @@ input[type=submit]:hover {
   padding: 14px 16px;
   color: var(--Honeydew);
   font-size: larger;
+  
 }
 
 .cabecera__nav-bar--li p:hover {
@@ -177,28 +183,28 @@ input[type=submit]:hover {
   gap: 1rem;
 }
 
+.venta {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  margin-left: -11rem;
+}
+
 .contenedor-layout__header {
   grid-area: header;
 }
 
-.contenedor-layout__main {
+.contenedor-layout__main { 
   grid-area: main;
 }
 
-.contenedor-layout__form {
-  margin-top: 4.5rem;
+.contenedor-layout__form {  
   grid-area: form;
 }
 
 .contenedor-layout__footer {
   grid-area: footer;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-left: 0.8rem;
-  
 }
 
 td,

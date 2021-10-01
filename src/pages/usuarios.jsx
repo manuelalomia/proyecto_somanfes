@@ -1,4 +1,4 @@
-import GestionUsuarios from "../components/gestion_usuarios_roles";
+import GestionUsuarios from "../components/usuarios";
 
 function gestionUsuarios(){
   return(

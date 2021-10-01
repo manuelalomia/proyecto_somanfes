@@ -4,13 +4,14 @@ function Producto() {
 
     <div className="contenedor-layout">
       <div className="contenedor-layout__header">
-        <h1>Registro de productos</h1>
-      </div>      
+        <h1>Gestión de productos</h1>
+      </div>
       <div className="contenedor-layout__main">
-      
-      <label className="buscar"> Buscar:</label>       
-      <input type="search" placeholder="ingrese dato a buscar"/>  
-      <input className="boton" type="submit" value="Buscar producto"></input>   
+        <div>  
+        <label className="buscar"> Buscar:</label>
+        <input type="search" placeholder="ingrese dato a buscar" />
+        <input className="boton" type="submit" value="Buscar producto"></input>
+        </div>
 
         <table>
           <tr>
@@ -35,10 +36,12 @@ function Producto() {
       </div>
       <div className="contenedor-layout__form">
         <form className="contenedor-layout__form--formulario-ventas" action="">
+          <label for="">id del producto</label>
+          <input type="text"></input>
           <label for="">Descripción del producto</label>
           <input type="text"></input>
           <label for="">Valor unitario</label>
-          <input type="number"></input>          
+          <input type="number"></input>
           <input className="boton" type="submit" value="Registrar producto"></input>
         </form>
       </div>
