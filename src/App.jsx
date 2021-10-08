@@ -3,8 +3,6 @@ import Inicio from "./pages/inicio";
 import Login from "./components/login";
 import Venta from "./pages/ventas";
 import './styles/styles.css';
-import RegistrarVenta from "./components/registrar_estado_venta";
-import GestionVendedores from "./components/gestion_vendedores";
 import GestionUsuarios from "./components/usuarios";
 import Producto from "./components/productos";
 
