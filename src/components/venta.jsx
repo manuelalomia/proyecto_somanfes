@@ -3,45 +3,66 @@
 function Venta() {
   return (
 
-    <div className="contenedor-layout">
+    <div className="contenedor-layout  venta">
+
       <div className="contenedor-layout__header">
         <h1>Registrar ventas</h1>
       </div>
       <div className="contenedor-layout__main">
+        <label className="buscar"> Buscar:</label>
+        <input type="search" placeholder="ingrese datos" />
+        <input className="boton" type="submit" value="Buscar venta"></input>
         <table>
           <tr>
-            <th>Id</th>
+            <th>Id venta</th>
             <th>Valor total</th>
-            <th>Descrición</th>
-            <th>Fecha inicial</th>
-            <th>Fecha futura de pago</th>
-            <th>Responsable</th>
+            <th>Identificador</th>
+            <th>Cantidad</th>
+            <th>Precio unitario</th>
+            <th>Fecha de venta</th>
+            <th>Documento identificación cliente</th>
+            <th>Nombre del cliente</th>
+            <th>Vendedor</th>
+            <th>Estado de la venta</th>
             <th>Acciones</th>
           </tr>
           <tr>
             <th>01</th>
             <th>$500</th>
-            <th>prueba</th>
+            <th>01 venta</th>
+            <th>2 unidades</th>
+            <th>$250</th>
             <th>27/09/2021</th>
-            <th>27/10/2021</th>
-            <th>Felipe Gonzalez</th>
-            <th>editar/eliminar</th>
+            <th>1111000000</th>
+            <th>Pepito Perez</th>
+            <th>Camilo Chaparro</th>
+            <th>
+              <select name="" id="">
+                <option value="">En proceso</option>
+                <option value="">Entregada</option>
+                <option value="">Cancelada</option>
+              </select></th>
+            <th>editar</th>
           </tr>
         </table>
       </div>
       <div className="contenedor-layout__form">
         <form className="contenedor-layout__form--formulario-ventas" action="">
-          <label for="">Valor venta</label>
+          <label for="">id venta</label>
           <input type="text"></input>
-          <label for="">Descripición</label>
+          <label for="">Valor total</label>
           <input type="text"></input>
-          <label for="">Descripción de la venta</label>
+          <label for="">Cantidad</label>
+          <input type="number"></input>
+          <label for="">Valor unitario</label>
           <input type="text"></input>
-          <label for="">Fecha inicial</label>
+          <label for="">Fecha de venta</label>
           <input type="date"></input>
-          <label for="">Fecha futura de pago</label>
-          <input type="date"></input>
-          <label for="">Responsable</label>
+          <label for="">Documento cliente</label>
+          <input type="text"></input>
+          <label for="">Nombre del cliente</label>
+          <input type="text"></input>
+          <label for="">Vendedor</label>
           <input type="text"></input>
           <input className="boton" type="submit" value="Generar venta"></input>
         </form>
