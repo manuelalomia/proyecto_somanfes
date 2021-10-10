@@ -1,16 +1,20 @@
 import axios from 'axios';
+import {link} from 'react-router';
 function Producto() {
   return (
-
     <div className="contenedor-layout">
       <div className="contenedor-layout__header">
         <h1>Gestión de productos</h1>
       </div>
       <div className="contenedor-layout__main">
-        <div>  
-        <label className="buscar"> Buscar:</label>
-        <input type="search" placeholder="ingrese dato a buscar" />
-        <input className="boton" type="submit" value="Buscar producto"></input>
+        <div>
+          <label className="buscar"> Buscar:</label>
+          <input type="search" placeholder="ingrese dato a buscar" />
+          <input
+            className="boton"
+            type="submit"
+            value="Buscar producto"
+          ></input>
         </div>
 
         <table>
@@ -25,10 +29,11 @@ function Producto() {
             <th>01</th>
             <th>Cigueñal NPR</th>
             <th>US$170</th>
-            <th><select name="" id="">
-              <option value="">Disponible</option>
-              <option value="">No disponible</option>
-            </select>
+            <th>
+              <select name="" id="">
+                <option value="">Disponible</option>
+                <option value="">No disponible</option>
+              </select>
             </th>
             <th>actualizar productos</th>
           </tr>
@@ -37,21 +42,17 @@ function Producto() {
       <div className="contenedor-layout__form">
         <form className="contenedor-layout__form--formulario-ventas" action="">
           <label for="">id del producto</label>
-          <input type="text"></input>
+          <input type="text" required></input>
           <label for="">Descripción del producto</label>
-          <input type="text"></input>
+          <input type="text" required></input>
           <label for="">Valor unitario</label>
-          <input type="number"></input>
+          <input type="number" required></input>
           <input className="boton" type="submit" value="Registrar producto"></input>
         </form>
       </div>
-      <div className="contenedor-layout__footer">
-
-      </div>
+      <div className="contenedor-layout__footer"></div>
     </div>
-
-
-  )
+  );
 }
 
 export default Producto;
