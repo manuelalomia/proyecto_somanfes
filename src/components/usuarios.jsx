@@ -1,4 +1,63 @@
 
+const usuarios = [
+    {
+        "ID": "72.354.211",
+        "Nombre": "Juan de Castellanos",
+        "Rol" : "Administrador",
+        "Accion" : "",
+        "Estado" : "",
+    },
+    {
+        "ID": "54.826.327",
+        "Nombre": "Marcela Jimenez",
+        "Rol" : "Administrador",
+        "Accion" : "",
+        "Estado" : "",
+    },
+
+    {
+        "ID": "72.346.921",
+        "Nombre": "Francisco Rodriguez",
+        "Rol" : "Vendedor",
+        "Accion" : "",
+        "Estado" : "",
+    },
+    {
+        "ID": "72.462.575",
+        "Nombre": "Martin Garcia",
+        "Rol" : "Vendedor",
+        "Accion" : "",
+        "Estado" : "",
+    },
+    {
+        "ID": "1.032.751.826",
+        "Nombre": "Roberto López",
+        "Rol" : "Vendedor",
+        "Accion" : "",
+        "Estado" : "",
+    },
+    {
+        "ID": "1.014.172.462",
+        "Nombre": "Sara Rodriguez",
+        "Rol" : "Vendedor",
+        "Accion" : "",
+        "Estado" : "",
+    },
+    {
+        "ID": "1.012.513.487",
+        "Nombre": "Salomé García",
+        "Rol" : "Vendedor",
+        "Accion" : "",
+        "Estado" : "",
+    },
+    {
+        "ID": "1.014.689.997",
+        "Nombre": "Julian Pardo",
+        "Rol" : "Vendedor",
+        "Accion" : "",
+        "Estado" : "",
+    },
+]
 function GestionUsuarios() {
   return (
 
