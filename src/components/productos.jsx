@@ -1,5 +1,7 @@
 import axios from 'axios';
 import {link} from 'react-router';
+import React, { useEffect, useState } from "react";
+
 function Producto() {
   return (
     <div className="contenedor-layout">
