@@ -1,6 +1,8 @@
 import axios from 'axios';
 import {link} from 'react-router';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const listaProductosBackend = [
   {
@@ -211,16 +213,14 @@ const listaProductosBackend = [
 ];
 
 const ListaProductos =()=>{
-  const[mostrarTabla, setMostrarTabla] = useState(true);
-  const[ListaProductos, setListaProductos] = useState([]);
-  const[textoBoton, setTextoBoton] = useState('Registrar producto');
-  const [colorBoton, setColorBoton] = useState("--Rojo-imperial");
-}
+  const [mostrarTabla, setMostrarTabla] = useState(true);
+  const [ListaProductos, setListaProductos] = useState([]);
+  const [textoBoton, setTextoBoton] = useState('Registrar producto');
+};
 useEffect(()=>{
   //obtener lista de productos desde el backend
   setListaProductos(listaProductosBackend);
 },[]);
-
 
 
 function Producto ({listaProductosBackend}) {
@@ -286,26 +286,25 @@ function Producto ({listaProductosBackend}) {
           </tbody>
         </table>
       </div>
+  );
+};
       
-      const FormularioCreacionProducto = ({
-        funcionParaMostrarLaTabla,
-        ListaProductos,
-        funcionParaAgregarProducto
-      }) => {
+const FormularioCreacionProducto = ({setMostrarTabla, ListaProductos, setListaProductos}) => {
+  const form = useRef(null);
   
-        const enviarAlBackend = ()=> {
-          console.log('ID', ID, 'Descripcion', Descripcion, 'Modelo', Modelo, 'Valor unitario',ValorUnitario);
-          if (ID === '' || Descripcion===''||Modelo==='' ||ValorUnitario===''){
-            toast.error ("Ingrese todos los datos");
-          } else {
-            toast.success('Producto creado con exito');
-            funcionParaMostrarLaTabla(true);
-            funcionParaAgregarProducto([
-              ...listaProductos,
-              {ID: ID, Descripcion:Descripcion, Modelo:Modelo, Valor Unitario:ValorUnitario},
-            ]);
-          }
-        };
+    const submitForm = (e)=>{
+      e.preventDefault();
+      const fd = new FormData(form.current);
+
+      const nuevoProducto ={};
+      fd.forEach(value, key) =>{
+        nuevoProducto[key] = value;
+      };
+
+        setMostrarTabla(true);
+        setListaProductos([...listaProductos,nuevoProducto]);
+        toast.success('Producto agregado con exito');
+      };
 
         return (
           <div className="contenedor-layout__form">
@@ -325,8 +324,7 @@ function Producto ({listaProductosBackend}) {
       <div className="contenedor-layout__footer"></div>
     
         );
-         };
-  );
-}
+      };
+
 
 export default Producto;
